@@ -2,14 +2,66 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!-- ====================================================== -->
+    <!--                          父 POM                        -->
+    <!-- ====================================================== -->
     <parent>
         <artifactId>sunchaser-earth</artifactId>
         <groupId>com.sunchaser.earth</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0.0.0-SNAPSHOT</version>
     </parent>
+
+    <!-- ====================================================== -->
+    <!--                         POM 版本                       -->
+    <!-- ====================================================== -->
     <modelVersion>4.0.0</modelVersion>
 
+    <!-- ====================================================== -->
+    <!--                         POM GAV                        -->
+    <!-- ====================================================== -->
     <artifactId>sunchaser-earth-service</artifactId>
 
+    <!-- ====================================================== -->
+    <!--                         POM 类型                       -->
+    <!-- ====================================================== -->
+    <packaging>jar</packaging>
 
+    <!-- ====================================================== -->
+    <!--                       项目名和组织                      -->
+    <!-- ====================================================== -->
+    <name>${project.artifactId}</name>
+    <description>======== service模块 ========</description>
+
+    <!-- ====================================================== -->
+    <!--                        开发者介绍                       -->
+    <!-- ====================================================== -->
+    <developers>
+        <developer>
+            <name>SunChaser</name>
+            <email>admin@lilu.org.cn</email>
+            <organization>地球</organization>
+        </developer>
+    </developers>
+
+    <!-- ====================================================== -->
+    <!--                      组件依赖管理                        -->
+    <!-- ====================================================== -->
+    <dependencies>
+        <dependency>
+            <groupId>com.sunchaser.earth</groupId>
+            <artifactId>sunchaser-earth-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.sunchaser.earth</groupId>
+            <artifactId>sunchaser-earth-integrate</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.sunchaser.earth</groupId>
+            <artifactId>sunchaser-earth-dao</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.sunchaser.earth</groupId>
+            <artifactId>sunchaser-earth-domain</artifactId>
+        </dependency>
+    </dependencies>
 </project>

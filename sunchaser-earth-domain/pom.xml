@@ -19,7 +19,7 @@
     <!-- ====================================================== -->
     <!--                         POM GAV                        -->
     <!-- ====================================================== -->
-    <artifactId>sunchaser-earth-common</artifactId>
+    <artifactId>sunchaser-earth-domain</artifactId>
 
     <!-- ====================================================== -->
     <!--                         POM 类型                       -->
@@ -30,7 +30,7 @@
     <!--                       项目名和组织                      -->
     <!-- ====================================================== -->
     <name>${project.artifactId}</name>
-    <description>========== common模块 ==========</description>
+    <description>======== domain模块 ========</description>
 
     <!-- ====================================================== -->
     <!--                        开发者介绍                       -->
@@ -48,37 +48,8 @@
     <!-- ====================================================== -->
     <dependencies>
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-io</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>cn.hutool</groupId>
-            <artifactId>hutool-core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-configuration-processor</artifactId>
-            <optional>true</optional>
+            <groupId>com.sunchaser.earth</groupId>
+            <artifactId>sunchaser-earth-common</artifactId>
         </dependency>
     </dependencies>
 </project>

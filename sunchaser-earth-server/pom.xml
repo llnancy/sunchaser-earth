@@ -2,15 +2,50 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!-- ====================================================== -->
+    <!--                          父 POM                        -->
+    <!-- ====================================================== -->
     <parent>
         <artifactId>sunchaser-earth</artifactId>
         <groupId>com.sunchaser.earth</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0.0.0-SNAPSHOT</version>
     </parent>
+
+    <!-- ====================================================== -->
+    <!--                         POM 版本                       -->
+    <!-- ====================================================== -->
     <modelVersion>4.0.0</modelVersion>
 
+    <!-- ====================================================== -->
+    <!--                         POM GAV                        -->
+    <!-- ====================================================== -->
     <artifactId>sunchaser-earth-server</artifactId>
 
+    <!-- ====================================================== -->
+    <!--                         POM 类型                       -->
+    <!-- ====================================================== -->
+    <packaging>jar</packaging>
+
+    <!-- ====================================================== -->
+    <!--                       项目名和组织                      -->
+    <!-- ====================================================== -->
+    <name>${project.artifactId}</name>
+    <description>======== server模块 ========</description>
+
+    <!-- ====================================================== -->
+    <!--                        开发者介绍                       -->
+    <!-- ====================================================== -->
+    <developers>
+        <developer>
+            <name>SunChaser</name>
+            <email>admin@lilu.org.cn</email>
+            <organization>地球</organization>
+        </developer>
+    </developers>
+
+    <!-- ====================================================== -->
+    <!--                      组件依赖管理                        -->
+    <!-- ====================================================== -->
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -20,5 +55,34 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.sunchaser.earth</groupId>
+            <artifactId>sunchaser-earth-service</artifactId>
+        </dependency>
     </dependencies>
+
+    <!-- ====================================================== -->
+    <!--               项目构建（包名/默认目标/插件等）             -->
+    <!-- ====================================================== -->
+    <build>
+        <finalName>sunchaser-earth</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring.boot.maven.plugin.version}</version>
+                <configuration>
+                    <mainClass>${start-class}</mainClass>
+                    <layout>ZIP</layout>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal> <!-- 依赖的jar包打进来-->
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
